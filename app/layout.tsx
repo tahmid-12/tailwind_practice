@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter,Roboto,Lato,Ruwudu } from 'next/font/google'
+import { Ruwudu } from 'next/font/google'
+import { Navbar } from '@/components'
 
 const inter = Ruwudu({ subsets: ['latin'], weight:['400'] })
 
@@ -16,7 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   )
 }
