@@ -4,5 +4,5 @@ export interface HeroProps{
 }
 
 export interface SliderProps{
-    sliders: string[];
+    sliders: { image: string }[];
 }
